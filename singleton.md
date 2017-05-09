@@ -1,7 +1,4 @@
 ### Singleton
-1. How is a singleton implemented?
-2. Can it be made thread-safe?
-3. Can the singleton instance be lazily instantiated?
 
 * Singleton classes must be thread safe and made sure that initialization code only runs once at runtime.
   - Swift: 
