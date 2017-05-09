@@ -187,8 +187,6 @@
 2. How does it work?
 3. Garbage collection?
 4. Automatic reference counting?
-* Swift: Swift uses Automatic Reference Counting (ARC) for memory managment. When a new instance of a class is created, ARC allocates a chunk of memory to store information about the instance. When an instance is no longer needed ARC frees the allocated memory so that the memory can be used for other purposes. To allocate and deallocate safely ARC tracks how many properties, constants, and variables for currently referring to the class instance. ARC will never deallocate memory as long as there at least one active reference to the instance exists.
-* C#: C# uses the Common Language Runtime (CLR) to allocate memory. CLR allocates memory to the 'heap' everytime an object is created. The garbage collector in C# works in this heap. The heap is categorized by different 'Generations' that rank the objects based on the lifespan of the object. The garbage collector is then triggered depending on three conditions, when the memory is running out, when the garbage collector found the lifespan of the objects are high thus increasing the threshold allocation, and lastly when the garbage collector is called directly with GC.Collect().
 
 ### Comparisons of references and values
 1. How are values compared? (i.e. comparing two strings)
@@ -198,6 +196,55 @@
 2. Does the language have features for handling null/nil references?
 
 ### Errors and exception handling
+ * Swift: 
+   - Errors are represented by values of types that conform to the Error protocal that indicats a type can be used for error handling. Error conditions are ideal for Swift enumerations with associate values allowing additional information about status of an error. Enumeration example for error conditions:
+ 
+         enum VendingMachineError: Error {
+             case invalidSelection
+             case insufficientFunds(coinsNeeded: Int)
+             case outOfStock
+         }
+     
+    - Throwing errors indicates that something unexpected happened and the execution stops. A "throw" statement can be used to throw and error.
+    
+          throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
+    
+    - Four ways to handle errors in Swift. Using throwing functions, a do-catch statement, as an optional value, or state that the error will not occur.
+    
+      * Throwing functions: You can use the "throws" keyward to indicate that a method can throw an error. It is place after its parameters.
+      
+            func canThrowErrors() throws -> String
+            func cannotThrowErrors() -> String
+           
+      * Do-catch statement: Used to hadle errors by running a block of code. An error that is thrown by the do clause is matched against the catch clause to determine which catch statement can handle the error. Catch clauses don't have to handle every possible error that the do clause can throw. If none of the catch clauses handle the error, it moves on t the surrounding scope. But the error still must be handled.
+      
+            do {
+                try expression
+                statements
+            } catch pattern 1 {
+                statements
+            } catch pattern 2 where condition {
+                statements
+            }
+          
+      * Converting Errors to Optional Values: Use "try?" to handle by converting to optional value. If an error is thrown by try? statement, the value of the expression is nil.
+      
+            func someThrowingFunction() throws -> Int {
+                // ...
+            }
+
+            let x = try? someThrowingFunction()
+
+            let y: Int?
+            do {
+                y = try someThrowingFunction()
+            } catch {
+                y = nil
+            }
+            
+       * Disabling Error Propagation: When you know a throwing method won't throw an error at runtime, you can use "try!" before the expression to disable error propagation. If an error is thrown, a runtime error will occur.
+       
+             let photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")
 
 ### Lambda expressions, closures, or functions as types
 
