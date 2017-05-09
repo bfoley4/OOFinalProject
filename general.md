@@ -14,3 +14,7 @@
 ### Unique features of the language
 * Swift: Completely compatible with objective (Use same APIs). You can use both languages in the same project.
 * C#: Partial Classes - you can define a class in multiple files.
+
+### Null/nil references
+* Swift: Swift does not support Null. Swift uses nil which means "no value." It is only assignable to optional variables.
+* C#: C# supports null which means "no object." Null is the default value of reference-type variables. Ordinary value types cannot be null.
