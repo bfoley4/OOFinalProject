@@ -12,7 +12,7 @@
 * [Classes](classes.md)
 * [Error Handling](errors.md)
 * [General](general.md)
-* [Lamda](lamda.md)
+* [Lamda Expressions](lamda.md)
 * [Memory Management](memoryManagement.md)
 * [Namespace](namespace.md)
 * [Properties](properties.md)
