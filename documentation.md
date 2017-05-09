@@ -9,7 +9,7 @@
 * C#: Create a simpler version of complex languages. (C and C++)
 
 3. Is the language a reaction to a previous language or a replacement for another language?
-* Swift: Create a more simple and elgant way to develop apps for ios instead of using other languages (objective c). Encorparates multiple functions from other languages.
+* Swift: Create a more simple and elegant way to develop apps for ios instead of using other languages (objective c). Encorparates multiple functions from other languages.
 * C#: Derived from C and C++
 
 ### Unique features of the language
@@ -39,13 +39,10 @@
 ### Types
 1. What types does the language support?
   * Swift: In Swift, there are two kinds of types: named types and compound types. 
-    - A named type is a type that can be given a particular name when it is defined. Named types include classes, structures, enumerations, and protocols. For example, instances of a user-defined class named MyClass have the type MyClass. In addition to user-defined named types, the Swift standard library defines many commonly used named types, including those that represent arrays, dictionaries, and optional values.
-    - A compound type is a type without a name, defined in the Swift language itself. There are two compound types: function types and tuple types. A compound type may contain named types and other compound types. For instance, the tuple type (Int, (Int, Int)) contains two elements: The first is the named type Int, and the second is another compound type (Int, Int).
+    - Named type: Type that can be given a particular name when defined. Includes classes, structures enumerations, and protocols. In C#, instances of a user-defined class named Dog have the type Dog. The Swift standard library also defines many commonly used name types; arrays, dictionaries, and optional values.
+    - Compound type: Type without a name, defined in the language itself.
   
   * C#: 
-    - Built-in Types: C# provides a standard set of built-in numeric types to represent integers, floating point values, Boolean expressions, text characters, decimal values, and other types of data. There are also built-in string and object types. These are available for you to use in any C# program.
-    - Custom Type: You use the struct, class, interface, and enum constructs to create your own custom types. The .NET Framework class library itself is a collection of custom types provided by Microsoft that you can use in your own applications. By default, the most frequently used types in the class library are available in any C# program. Others become available only when you explicitly add a project reference to the assembly in which they are defined. After the compiler has a reference to the assembly, you can declare variables (and constants) of the types declared in that assembly in source code.
-    - Reference Types: A type that is defined as a class, delegate, array, or interface is a reference type. At run time, when you declare a variable of a reference type, the variable contains the value null until you explicitly create an instance of the object by using the new operator, or assign it an object that has been created elsewhere by using 
 
 ### Classes
 1. Defining
@@ -111,7 +108,7 @@
       }
 
 4. Destructing/de-initializing
-* C#: Uses a destructor
+* C#: Uses a destructor. Code example:
 
       class Car
       {
@@ -129,14 +126,14 @@
       
 ### Instance reference name in data type (class)
 1. this? self?
-* Swift: In Swift self is a special property of an instance that holds the instance itself. Most of the times self appears in an initializer or method of a class, structure or enumeration.
-* C#: The this keyword refers to the current instance of the class and is also used as a modifier of the first parameter of an extension method.
+* Swift: Swift uses the keyword "self" as a special property of an instance that holds the instance itself. Self usually appears in a initializer or a method.
+* C#: C# uses the "this" keyword and refers to the current instance of the class. It is also used as a modifier of the first paramater of an extension method.
 
 ### Properties
 1. Getters and setters...write your own or built in?
 * Swift: Build in custom getters and setters.
 * C#
-  - The get Accessor: The body of the get accessor resembles that of a method. It must return a value of the property type. The execution of the get accessor is equivalent to reading the value of the field. For example, when you are returning the private variable from the get accessor and optimizations are enabled, the call to the get accessor method is inlined by the compiler so there is no method-call overhead. However, a virtual get accessor method cannot be inlined because the compiler does not know at compile-time which method may actually be called at run time. The following is a get accessor that returns the value of a private field name:
+  - Similar to the behavior of a method, get accessors in Swift must return a value of the property type. However when returning a private variable from a get accessor, the call is inlined by the compiler so there is no method call over head. Get accesor example:
   
         class Person
         {
@@ -150,7 +147,7 @@
             }
         }
         
-  - The set Accessor: The set accessor resembles a method whose return type is void. It uses an implicit parameter called value, whose type is the type of the property. In the following example, a set accessor is added to the Name property:
+  - Swift's set accesor resembles a method with a return type of void. It uses a parameter called value whose type is the type of the property. Set accesor example (setting the Name property):
   
         class Person
         {
