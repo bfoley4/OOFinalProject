@@ -187,6 +187,8 @@
 2. How does it work?
 3. Garbage collection?
 4. Automatic reference counting?
+* Swift: Swift uses Automatic Reference Counting (ARC) for memory managment. When a new instance of a class is created, ARC allocates a chunk of memory to store information about the instance. When an instance is no longer needed ARC frees the allocated memory so that the memory can be used for other purposes. To allocate and deallocate safely ARC tracks how many properties, constants, and variables for currently referring to the class instance. ARC will never deallocate memory as long as there at least one active reference to the instance exists.
+* C#: C# uses the Common Language Runtime (CLR) to allocate memory. CLR allocates memory to the 'heap' everytime an object is created. The garbage collector in C# works in this heap. The heap is categorized by different 'Generations' that rank the objects based on the lifespan of the object. The garbage collector is then triggered depending on three conditions, when the memory is running out, when the garbage collector found the lifespan of the objects are high thus increasing the threshold allocation, and lastly when the garbage collector is called directly with GC.Collect().
 
 ### Comparisons of references and values
 1. How are values compared? (i.e. comparing two strings)
