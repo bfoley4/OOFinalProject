@@ -33,11 +33,16 @@
   Provide context to the compiler to allow you to create classes unrestricted. (A class named Console)
   
 ### Types
- * Swift: In Swift, there are two kinds of types: named types and compound types. 
-   - Named type: Type that can be given a particular name when defined. Includes classes, structures enumerations, and protocols. In C#, instances of a user-defined class named Dog have the type Dog. The Swift standard library also defines many commonly used name types; arrays, dictionaries, and optional values.
-   - Compound type: Type without a name, defined in the language itself.
+ * Swift: Type annotations begin with a colon and end with a type.
+ 
+       let someTuple: (Double, Double) = (3.14159, 2.71828)
+       func someFunction(a: Int) { /* ... */ }
+ 
+   - In Swift, there are two kinds of types: named types and compound types. 
+     * Named type: Type that can be given a particular name when defined. Includes classes, structures enumerations, and protocols. In C#, instances of a user-defined class named Dog have the type Dog. The Swift standard library also defines many commonly used name types; arrays, dictionaries, and optional values.
+     * Compound type: Type without a name, defined in the language itself. A compound type may contain two elements.
   
-  * C#: 
+  * C#: Provides usual built-in types, custom types form libraries, value types, reference types, generic types.
 
 ### Classes
 1. Defining
@@ -248,16 +253,18 @@
           }
 
 ### Lambda expressions, closures, or functions as types
-* Swift: Swift uses closures which is similiar to Java's lamda expressions.
-- Example of a closure in swift
 
-      func makeIncrementer(forIncrement amount: Int) -> () -> Int {
-          var runningTotal = 0
-          return () -> Int {
-              runningTotal += amount
-              return runningTotal
-          }
-      }
+* Swift: Swift uses closures which is similiar to Java's lamda expressions.
+  - Example of a closure in swift
+
+        func makeIncrementer(forIncrement amount: Int) -> () -> Int {
+            var runningTotal = 0
+            return () -> Int {
+                runningTotal += amount
+                return runningTotal
+            }
+        }
+        
 * C#: C# uses lamda expressions that you can use to create delegates or expression tree types.
 
       delegate int del(int i);  
@@ -265,8 +272,7 @@
       {  
           del myDelegate = x => x * x;  
           int j = myDelegate(5); //j = 25  
-      }  
-
+      } 
 
 ### Implementation of listeners and event handlers
 
