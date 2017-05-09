@@ -244,9 +244,26 @@
                 y = nil
             }
             
-       * Disabling Error Propagation: When you know a throwing method won't throw an error at runtime, you can use "try!" before the expression to disable error propagation. If an error is thrown, a runtime error will occur.
+       * Disabling Error Propagation: When you know a throwing method won't throw an error at runtime, you can use "try!" before the expression to disable error propagation. If an error is thrown, a runtime error will occur.ggg
        
              let photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")
+             
+  * C#
+    - Try block is used to partition code that might be affected by an exception. Catch blocks handle resulting exceptions. Finally block contains code that is run ragardless if an error is thrown or not.
+    
+          try
+          {
+              // Code to try goes here.
+          }
+          catch (SomeSpecificException ex)
+          {
+              // Code to handle the exception goes here.
+          }
+          finally
+          {
+              // Code to execute after the try (and possibly catch) blocks 
+              // goes here.
+          }
 
 ### Lambda expressions, closures, or functions as types
 
