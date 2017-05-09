@@ -3,7 +3,6 @@
 * Swift: Programming language developed by Apple to use for ios devices.
 * C#: Microsoft wanted to develop a OO language since it was becoming much more of an influence in computer programming. 
 
-
 2. What problems was the language trying to address?
 * Swift: Complexity of developing apps for ios. People wanted a easier way to code for ios than other preiously available languages.
 * C#: Create a simpler version of complex languages. (C and C++)
@@ -13,12 +12,10 @@
 * C#: Derived from C and C++
 
 ### Unique features of the language
-1. Does the language have any particularly unique features?
 * Swift: Completely compatible with objective (Use same APIs). You can use both languages in the same project.
 * C#: Partial Classes - you can define a class in multiple files.
 
 ### Name spaces
-1. How are name spaces implemented?
 * Swift:
  
       import FrameworkA
@@ -32,15 +29,13 @@
       Console.WriteLine("Hello");
       Console.WriteLine("World!");
 
-2. How are name spaces used?
 * Swift and C#: Shorten code lines into more compact statements. Console.WriteLine()... instead of System.Console.WriteLine()...
   Provide context to the compiler to allow you to create classes unrestricted. (A class named Console)
   
 ### Types
-1. What types does the language support?
-  * Swift: In Swift, there are two kinds of types: named types and compound types. 
-    - Named type: Type that can be given a particular name when defined. Includes classes, structures enumerations, and protocols. In C#, instances of a user-defined class named Dog have the type Dog. The Swift standard library also defines many commonly used name types; arrays, dictionaries, and optional values.
-    - Compound type: Type without a name, defined in the language itself.
+ * Swift: In Swift, there are two kinds of types: named types and compound types. 
+   - Named type: Type that can be given a particular name when defined. Includes classes, structures enumerations, and protocols. In C#, instances of a user-defined class named Dog have the type Dog. The Swift standard library also defines many commonly used name types; arrays, dictionaries, and optional values.
+   - Compound type: Type without a name, defined in the language itself.
   
   * C#: 
 
@@ -125,14 +120,11 @@
       }
       
 ### Instance reference name in data type (class)
-1. this? self?
 * Swift: Swift uses the keyword "self" as a special property of an instance that holds the instance itself. Self usually appears in a initializer or a method.
 * C#: C# uses the "this" keyword and refers to the current instance of the class. It is also used as a modifier of the first paramater of an extension method.
 
 ### Properties
-1. Getters and setters...write your own or built in?
 * Swift: Build in custom getters and setters.
-* C#
   - Similar to the behavior of a method, get accessors in Swift must return a value of the property type. However when returning a private variable from a get accessor, the call is inlined by the compiler so there is no method call over head. Get accesor example:
   
         class Person
@@ -165,12 +157,6 @@
             }
         }
 
-2. Backing variables?
-
-
-3. Computed properties?
-
-
 ### Interfaces / protocols
 1. What does the language support?
 2. What abilities does it have?
@@ -183,12 +169,8 @@
 2. How is reflection used?
 
 ### Memory management
-1. How is it handled?
-2. How does it work?
-3. Garbage collection?
-4. Automatic reference counting?
-   * Swift: Swift uses Automatic Reference Counting (ARC) for memory managment. When a new instance of a class is created, ARC allocates a chunk of memory to store information about the instance. When an instance is no longer needed ARC frees the allocated memory so that the memory can be used for other purposes. To allocate and deallocate safely ARC tracks how many properties, constants, and variables for currently referring to the class instance. ARC will never deallocate memory as long as there at least one active reference to the instance exists.
-   * C#: C# uses the Common Language Runtime (CLR) to allocate memory. CLR allocates memory to the 'heap' everytime an object is created. The garbage collector in C# works in this heap. The heap is categorized by different 'Generations' that rank the objects based on the lifespan of the object. The garbage collector is then triggered depending on three conditions, when the memory is running out, when the garbage collector found the lifespan of the objects are high thus increasing the threshold allocation, and lastly when the garbage collector is called directly with GC.Collect().
+ * Swift: Swift uses Automatic Reference Counting (ARC) for memory managment. When a new instance of a class is created, ARC allocates a chunk of memory to store information about the instance. When an instance is no longer needed ARC frees the allocated memory so that the memory can be used for other purposes. To allocate and deallocate safely ARC tracks how many properties, constants, and variables for currently referring to the class instance. ARC will never deallocate memory as long as there at least one active reference to the instance exists.
+ * C#: C# uses the Common Language Runtime (CLR) to allocate memory. CLR allocates memory to the 'heap' everytime an object is created. The garbage collector in C# works in this heap. The heap is categorized by different 'Generations' that rank the objects based on the lifespan of the object. The garbage collector is then triggered depending on three conditions, when the memory is running out, when the garbage collector found the lifespan of the objects are high thus increasing the threshold allocation, and lastly when the garbage collector is called directly with GC.Collect().
 
 ### Comparisons of references and values
 1. How are values compared? (i.e. comparing two strings)
