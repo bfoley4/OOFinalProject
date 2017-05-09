@@ -10,3 +10,7 @@
 3. Is the language a reaction to a previous language or a replacement for another language?
 * Swift: Create a more simple and elegant way to develop apps for ios instead of using other languages (objective c). Encorparates multiple functions from other languages.
 * C#: Derived from C and C++
+
+### Unique features of the language
+* Swift: Completely compatible with objective (Use same APIs). You can use both languages in the same project.
+* C#: Partial Classes - you can define a class in multiple files.
