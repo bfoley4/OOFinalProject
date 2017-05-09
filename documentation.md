@@ -176,8 +176,8 @@
 1. How are values compared? (i.e. comparing two strings)
 
 ### Null/nil references
-1. Which does the language use? (null/nil/etc)
-2. Does the language have features for handling null/nil references?
+* Swift: Swift does not support Null. Swift uses nil which means "no value." It is only assignable to optional variables.
+* C#: C# supports null which means "no object." Null is the default value of reference-type variables. Ordinary value types cannot be null.
 
 ### Errors and exception handling
  * Swift: 
